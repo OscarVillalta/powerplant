@@ -17,6 +17,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+BASE_DIR = os.path.dirname(__file__)
+LOGO_PATH = os.path.join(BASE_DIR, "powerplant1.svg")
+
 # ------------------------------------------------------
 # Streamlit config (should be one of the first calls)
 # ------------------------------------------------------
@@ -133,7 +136,7 @@ col1, col2 = st.columns([1, 1.5])
 with col1:
     st.markdown("# AFC Power Plant Portal")
 with col2:
-    st.image("powerplant1.svg", width=80)
+    st.image(LOGO_PATH, width=80)
 
 st.write("Welcome to the internal plant intelligence and contact system.")
 
